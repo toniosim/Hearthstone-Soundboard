@@ -1,0 +1,92 @@
+body {
+
+	margin-bottom: 40px;
+	background-color: #334455;
+}
+
+body.container {
+	background-color: #eee;
+}
+
+h1 {
+	font-size: 2em;
+	color: #d35400;
+
+}
+
+
+button.accordion {
+	background-color:#ddd;
+	color: #444;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	text-align: left;
+	border: 1px solid;
+	outline: none;
+	transition: 0.6s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ccc;
+}
+
+div.panel {
+	padding: 0 18px;
+	background-color: #eee;
+	border: none;
+	outline: none;
+	display: none;
+}
+
+div.panel.show {
+	display: block !important;
+}
+
+.sound {
+	background-color: #bbb;
+	cursor: pointer;
+	width: 100% ;
+	border: none;
+	text-align: left;
+	outline: none;
+}
+
+.sound:hover {
+	background-color: #ccc;
+}
+
+.sound:active {
+	background-color: #ddd;
+}
+
+/*.btn-sound {
+	background-color: #334455;
+	border: none;
+	color: white;
+}
+	.btn-sound:hover {
+		background-color: #445566;
+		color: #eeeeee;
+		border: none;
+		box-shadow:0 8px 14px 0 rgba(0,0,0,0.24)
+
+	}
+
+	.btn-sound:active {
+		background-color: #334455;
+		border:none;
+		box-shadow: none;
+	}
+
+	.btn-sound:visited {
+		background-color: #334455;
+		color: white;
+		border: none;
+
+	}
+	.btn-sound:focus {
+		color: white;
+		outline: 0;
+	}
+*/

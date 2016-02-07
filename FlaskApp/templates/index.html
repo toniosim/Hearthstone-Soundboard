@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Hearthstone Soundboard Flask App</title>
+
+	<link href="..\static\css\bootstrap.min.css" rel="stylesheet">
+	<link href="..\static\css\jumbotron.css" rel="stylesheet">
+	<link href="..\static\css\hssb.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="header">
+			<nav>
+				<ul class="nav-pills pull-right">
+					<li role="presentation"><a href="#">Home</a>
+					</li>
+					<li role="presentation"><a href="#">Aboot</a>
+					</li>
+				</ul>
+			</nav>
+		<h3 class="text-muted">{{ app_title }}</h3>
+		</div>
+
+		<div class="jumbotron">
+			<h1>HSSB App</h1>
+				<p class="lead"></p>
+				{% for row in card_rows %}
+				<button class="accordion">{{row["cardname"]}}</button>
+				<div class="panel">
+					{% for sound_row in sound_rows %}
+					{% if sound_row["cardid"] == row["cardid"] %}
+					<audio id="Play">
+					<source src=
+					"..\static\sounds\cardsounds\{{sound_row["cardname"]}}\sounds\{{sound_row["soundfile"]}} " 
+					type="audio/mpeg">
+					</audio>
+					<button class="sound">{{sound_row["soundfile"]}}</button>
+					{% endif %}
+					{% endfor %}
+					
+				</div>
+				{% endfor %}
+				<script src="..\static\js\accordion.js"> </script>
+				<script src="..\static\js\sounds.js"> </script>
+
+					<!--<audio id="Play"> 
+					<source src="..\static\sounds\cardsounds\Alexstrasza\sounds\VO_EX1_561_Play_01.mp3" type="audio/mpeg"> 
+					</audio>
+					<button onclick="document.getElementById('Play').play()" class="btn btn-sm btn-sound">Play</button>
+					-->
+				
+		</div>
+
+	    <footer class="footer">
+	    	<p>by {{ author }}</p>
+	    </footer>
+
+   </div>
+</body>
+</html>
