@@ -38,7 +38,7 @@
 				<div class="panel">
 					{% for sound_row in sound_rows %}
 					{% if sound_row["cardid"] == row["cardid"] %}
-					<audio id="Play">
+					<audio id="Play" preload="none">
 					<source src=
 					"..\static\sounds\cardsounds\{{sound_row["cardname"]}}\sounds\{{sound_row["soundfile"]}} " 
 					type="audio/mpeg">

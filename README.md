@@ -11,7 +11,6 @@ This web app was built using Python 2.7, Flask, and Sqlite3.
 Basic funcionality finished! As in, here's all the sounds that could be scrpaed from Hearthead on an html page!
 
 Future Functionality:
-- Actual optimization, won't just load all the sounds when you enter
 - Filtering based off class/set.
 - Actually have it hosted somewhere online
 
@@ -26,7 +25,7 @@ SQLlite3
 Flask
 
 - Clone it to your computer
-- run the pythong scripts in this order:
+- run the python scripts in this order:
 	-- getcard.py (will give you hero/hero power .jsons as well)
 	-- getminion.py
 	-- getcardsounds.py (may takea while)
