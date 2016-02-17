@@ -21,17 +21,16 @@
 		<div class="header">
 			<nav>
 				<ul class="nav-pills pull-right">
-					<li role="presentation"><a href="#">Home</a>
+					<li role="presentation"><a href="#">Home </a>
 					</li>
-					<li role="presentation"><a href="#">Aboot</a>
+					<li role="presentation"><a href="#">About </a>
 					</li>
 				</ul>
 			</nav>
-		<h3 class="text-muted">{{ app_title }}</h3>
 		</div>
 
 		<div class="jumbotron">
-			<h1>HSSB App</h1>
+			<h1 class="title">{{ app_title }}</h1>
 				<p class="lead"></p>
 				{% for row in card_rows %}
 				<button class="accordion">{{row["cardname"]}}</button>

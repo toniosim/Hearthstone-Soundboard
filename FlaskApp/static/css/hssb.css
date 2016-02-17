@@ -1,20 +1,18 @@
 body {
 
 	margin-bottom: 40px;
-	background-color: #334455;
-}
-
-body.container {
-	background-color: #eee;
-}
-
-h1 {
-	font-size: 2em;
-	color: #d35400;
-
+	background: radial-gradient(#ffcc33, #b35c00,#4d2800);
+	background-attachment: fixed;
 }
 
 
+.jumbotron {
+	background-color: #fff9e6;
+}
+
+h1.title {
+	color: #000033;
+}
 button.accordion {
 	background-color:#ddd;
 	color: #444;
@@ -33,7 +31,7 @@ button.accordion.active, button.accordion:hover {
 
 div.panel {
 	padding: 0 18px;
-	background-color: #eee;
+	background-color: #fff9e6;
 	border: none;
 	outline: none;
 	display: none;
@@ -59,34 +57,3 @@ div.panel.show {
 .sound:active {
 	background-color: #ddd;
 }
-
-/*.btn-sound {
-	background-color: #334455;
-	border: none;
-	color: white;
-}
-	.btn-sound:hover {
-		background-color: #445566;
-		color: #eeeeee;
-		border: none;
-		box-shadow:0 8px 14px 0 rgba(0,0,0,0.24)
-
-	}
-
-	.btn-sound:active {
-		background-color: #334455;
-		border:none;
-		box-shadow: none;
-	}
-
-	.btn-sound:visited {
-		background-color: #334455;
-		color: white;
-		border: none;
-
-	}
-	.btn-sound:focus {
-		color: white;
-		outline: 0;
-	}
-*/
