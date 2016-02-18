@@ -12,7 +12,7 @@
 	<link href="..\static\css\jumbotron.css" rel="stylesheet">
 	<link href="..\static\css\hssb.css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	
+	<script src="..\static\js\buttoncolor.js"></script>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
 		<div class="header">
 			<nav>
 				<ul class="nav-pills pull-right">
-					<li role="presentation"><a href="#">Home </a>
+					<li role="presentation"><a href="/">Home </a>
 					</li>
 					<li role="presentation"><a href="#">About </a>
 					</li>
@@ -33,7 +33,10 @@
 			<h1 class="title">{{ app_title }}</h1>
 				<p class="lead"></p>
 				{% for row in card_rows %}
-				<button class="accordion">{{row["cardname"]}}</button>
+				<button class="accordion cardname" id="{{row["cardid"]}}" >
+				<script> assignColor({{row["cardid"]}}, {{row["cardclass"]}}) </script>
+				{{row["cardname"]}}</button>
+
 				<div class="panel">
 					{% for sound_row in sound_rows %}
 					{% if sound_row["cardid"] == row["cardid"] %}
@@ -50,12 +53,6 @@
 				{% endfor %}
 				<script src="..\static\js\accordion.js"> </script>
 				<script src="..\static\js\sounds.js"> </script>
-
-					<!--<audio id="Play"> 
-					<source src="..\static\sounds\cardsounds\Alexstrasza\sounds\VO_EX1_561_Play_01.mp3" type="audio/mpeg"> 
-					</audio>
-					<button onclick="document.getElementById('Play').play()" class="btn btn-sm btn-sound">Play</button>
-					-->
 				
 		</div>
 

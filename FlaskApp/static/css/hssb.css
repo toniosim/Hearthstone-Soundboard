@@ -3,6 +3,11 @@ body {
 	margin-bottom: 40px;
 	background: radial-gradient(#ffcc33, #b35c00,#4d2800);
 	background-attachment: fixed;
+	font-family: Verdana, sans-serif;
+}
+
+.cardname {
+	font-weight: bold;
 }
 
 
@@ -13,8 +18,8 @@ body {
 h1.title {
 	color: #000033;
 }
+
 button.accordion {
-	background-color:#ddd;
 	color: #444;
 	cursor: pointer;
 	padding: 18px;
@@ -26,7 +31,7 @@ button.accordion {
 }
 
 button.accordion.active, button.accordion:hover {
-    background-color: #ccc;
+    background: #ccc;
 }
 
 div.panel {
