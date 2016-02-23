@@ -1,3 +1,6 @@
+#main application to run the soundboard
+#run and point browser to localhost:5000
+
 from flask import Flask, render_template, request, redirect, g
 import sqlite3
 import os, sys
@@ -8,6 +11,7 @@ author = "Tonio Simonetta"
 rel_dir = os.path.realpath(".") + "/static/sounds/cardsounds"
 sound_dir = os.path.normpath(rel_dir)
 
+#only one page, all on index
 @app.route("/")
 def main():
 	card_conn = sqlite3.connect("cards.db")
@@ -20,6 +24,7 @@ def main():
 	card_cur = card_conn.cursor()
 	sound_cur = sound_conn.cursor()
 
+	#getting all cards and soundfiles
 	card_cur.execute("SELECT * FROM cards ORDER BY cardname ASC")
 	sound_cur.execute("SELECT * FROM sounds ORDER BY cardname ASC")
 
@@ -29,6 +34,7 @@ def main():
 	card_conn.close()
 	sound_conn.close()
 
+	#passing to index
 	return render_template("index.html", app_title=app_title, author=author, card_rows=card_rows, sound_rows=sound_rows)
 
 
