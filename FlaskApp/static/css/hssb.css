@@ -19,6 +19,10 @@ h1.title {
 	color: #000033;
 }
 
+input[type=checkbox] {
+	margin-left: 100px;
+}
+
 button.accordion {
 	color: #444;
 	cursor: pointer;

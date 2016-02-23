@@ -31,6 +31,18 @@
 
 		<div class="jumbotron">
 			<h1 class="title">{{ app_title }}</h1>
+			<form>
+				<input type="checkbox" name="Neutral" value="" checked>
+				<input type="checkbox" name="Druid" value="" checked>
+				<input type="checkbox" name="Hunter" value="" checked>
+				<input type="checkbox" name="Mage" value="" checked>
+				<input type="checkbox" name="Paladin" value="" checked>
+				<input type="checkbox" name="Priiest" value="" checked>
+				<input type="checkbox" name="Rogue" value="" checked>
+				<input type="checkbox" name="Shaman" value="" checked>
+				<input type="checkbox" name="Warrior" value="" checked>
+				<input type="checkbox" name="Warlock" value="" checked>
+			</form>
 				<p class="lead"></p>
 				{% for row in card_rows %}
 				<button class="accordion cardname" id="{{row["cardid"]}}" >

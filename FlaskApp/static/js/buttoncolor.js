@@ -1,3 +1,4 @@
+// getting passed the card class, which determines color of the button, assigned via card_id
 function assignColor(card_id, card_class) {
 	//warrior:
 	if(card_class == 1) {
