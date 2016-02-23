@@ -4,11 +4,11 @@ This project uses user Ducino's python scripts that pulled JSON info about Heart
 from Hearthhead.com. I then forked the project (under name hearthstone) to also filter out the minions
 and scrape the card sounds from the website (Not all are currently there).
 
-This web app was built using Python 2.7, Flask, and Sqlite3.
+This web app was built using Python 2.7, BeautifulSoup4, Flask, and Sqlite3.
 
 -----v0.1------
 
-Basic funcionality finished! As in, here's all the sounds that could be scrpaed from Hearthead on an html page!
+Basic funcionality finished! As in, here's all the sounds that could be scraped from Hearthead on an html page!
 
 Future Functionality:
 - Filtering based off class/set.
