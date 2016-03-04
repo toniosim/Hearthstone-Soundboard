@@ -18,10 +18,9 @@ def scrub(name):
 
 # creating the card_name/sounds path to put the sound files in
 def create_dirs(card_name):
-			if not os.path.exists("static\\sounds\\cardsounds\\" + card_name):
-				os.mkdir("static\\sounds\\cardsounds\\" + card_name)
-			if not os.path.exists("static\\sounds\\cardsounds\\" + card_name + "\sounds"):
-					os.mkdir("static\\sounds\\cardsounds\\" + card_name + "\sounds")
+			cardsounds_norm = os.path.normpath("static\\sounds\\cardsounds\\" + card_name + "\sounds")
+			if not os.path.exists(cardsounds_norm):
+					os.mkdir(cardsounds_norm)
 
 
 # goes to webpage based on card_num, downloads cards' sounds, puts them in card_name/sounds folder
@@ -42,7 +41,8 @@ def extract_soundfiles(card_num, card_name):
 		dl_response = requests.get(download)
 
 		save_file = "static\\sounds\\cardsounds\\" + card_name + "/" + get_name(download)
-		with open(save_file, "wb") as code:
+		save_norm = os.path.normpath(save_file)
+		with open(save_norm, "wb") as code:
 			code.write(dl_response.content)
 
 
@@ -67,8 +67,9 @@ def main():
 	file_dir = "minioncards.json"
 	cards_file = open(file_dir)
 
-	if not os.path.exists("static\\sounds\\cardsounds\\"):
-		os.mkdir("static\\sounds\\cardsounds\\")
+	cardsounds_norm = os.path.normpath("static\\sounds\\cardsounds\\")
+	if not os.path.exists(cardsounds_norm):
+		os.mkdir(cardsounds_norm)
 
 	get_sounds(cards_file)
 
