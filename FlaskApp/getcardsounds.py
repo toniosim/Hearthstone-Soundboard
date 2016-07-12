@@ -57,10 +57,11 @@ def get_sounds(cards_file):
 		card_num = str(card["id"])
 		print card_name, ": ", card_num
 
-		create_dirs(card_name)
+		cardsounds_norm = os.path.normpath("static\\sounds\\cardsounds\\" + card_name + "\\sounds")
+		if not os.path.exists(cardsounds_norm):
+					os.makedirs(cardsounds_norm)
+					extract_soundfiles(card_num, card_name)
 
-
-		extract_soundfiles(card_num, card_name)
 
 
 def main():

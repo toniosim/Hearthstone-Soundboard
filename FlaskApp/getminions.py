@@ -1,12 +1,13 @@
-#create a json file of just minions, give class to neutral
+#create a json file of just minions, chang empty class to neutral
 import json
 
 # only want the minions
 def parse_minions(filename):
 	minions_list = []
 	cards_json = json.loads(open(filename).read() )
+
 	for card in cards_json:
-		if card["type"] == 4:
+		if card["type"] == 4: # 4 = minion
 			minions_list.append(card)
 			
 
