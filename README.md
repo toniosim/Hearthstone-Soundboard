@@ -1,35 +1,17 @@
 A soundboard based off Blizzard's popular game Hearthstone!
 
-This project uses user Ducino's python scripts that pulled JSON info about Hearthstone cards
-from Hearthhead.com. I then forked the project (under name hearthstone) to also filter out the minions
-and scrape the card sounds from the website (Not all are currently there).
+This project uses user Ducino's python scripts (https://github.com/ducino/hearthstone) that pulled JSON info about Hearthstone cards from Hearthhead.com. I added functionality to filter
+out the minions and scrape the card sounds from the old version of HearthHead (Not all are currently there).
 
-This web app was built using Python 2.7, BeautifulSoup4, Flask, and Sqlite3.
-
------v0.1------
-
-Basic funcionality finished! As in, here's all the sounds that could be scraped from Hearthead on an html page!
-
-Future Functionality:
-- Filtering based off class/set.
-- Actually have it hosted somewhere online
-
-------------------------------
+This web app was built using Python 2.7, BeautifulSoup4, Flask, and Sqlite3. You can use the requirements.txt file to install the necessary dependencies using pip install -r requirements.txt. I recommend setting up a virtual environment.
 
 
-If you just can't wait for me to host it/wanna mess with it yourself:
+The plan is to eventually get this hosted on a site for people to enjoy but the functionality isn't quite there yet. The current getcards.py is broken since HearthHead changed the layout of the site, but the card.json file should have everything up to (and including) Whispers of the Old Gods. 
 
-Required:
-Python 2.7
-SQLlite3
-Flask
-
-- Clone it to your computer
-- run the python scripts in this order:
-	-- getcard.py (will give you hero/hero power .jsons as well)
+When all the scripts are running they run in this order:
+	-- getcard.py (will give you hero/hero power .jsons as well) (does not currently work)
 	-- getminion.py
-	-- getcardsounds.py (may takea while)
+	-- getcardsounds.py
 	-- connect.py
-- run the app.py script
+	-- app.py to get it started
 - while it's running, point your browser to localhost:5000
-* all the sound files currently download once you enter the index page, will be fixed
