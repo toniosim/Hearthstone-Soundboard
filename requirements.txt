@@ -1,6 +1,6 @@
 ﻿beautifulsoup4==4.4.1
 click==6.6
-flask==0.11.1
+flask==1.0
 itsdangerous==0.24
 jinja2==2.11.3
 MarkupSafe==0.23
